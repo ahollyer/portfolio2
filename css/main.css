@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Amatic SC', cursive;
+  color: #777;
+}
+p {
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  color: #777;
+  font-size: 1.5em;
+  text-align: center;
+}
+button {
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-family: 'Amatic SC', cursive;
+	font-size: 1.5em;
+	margin: 0 25px;
+	padding: 3px 10px;
+	background-color: #FFF;
+	color: #777;
+	border: 1px solid #777;
+	border-radius: 12px;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+button:hover {
+  background-color: #777;
+  color: #FFF;
+}
+.header {
+  width: 50%;
+
+  position: absolute;
+  top: 10%;
+  left: 25%;
+
+  font-size: 3em;
+  text-align: center;
+}
+.controls {
+  margin: 10px auto;
+  text-align: center;
+}
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Canvas properties */
+#canvas {
+  margin: 0;
+	width: 100vw;
+	height: 80vh;
+	margin: auto;
+}
+.box {
+	display: inline-block;
+	float: left;
+	box-sizing: border-box;
+	background-color: #FFF;
+}
+.outline {
+	border: 1px dotted #c8c8c8;
+}
