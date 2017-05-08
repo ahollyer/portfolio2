@@ -53,6 +53,9 @@ button:hover {
   height: 20vh;
   text-align: center;
 }
+.purple {
+  color: #673AB6;
+}
 .rainbow {
   background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
@@ -175,31 +178,26 @@ button:hover {
 }
 .grid figcaption {
 	position: absolute;
+  box-sizing: border-box;
 	top: 0;
 	left: 0;
 	padding: 20px;
-	background: #2c3f52;
-	color: #ed4e6e;
+	background: #333;
+	color: #818181;
 }
 .grid figcaption h3 {
 	margin: 0;
 	padding: 0;
 	color: #fff;
 }
-
-.grid figcaption span:before {
-	content: 'by ';
-}
-
 .grid figcaption a {
 	text-align: center;
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: #ed4e6e;
+	background: #673AB6;
 	color: #fff;
 }
-
 @media screen and (max-width: 31.5em) {
 	.grid {
 		padding: 10px 10px 100px 10px;
@@ -210,24 +208,23 @@ button:hover {
 	}
 }
 /* Hover effect */
-.cs-style-1 li {
+.thumbnail-hvr li {
 	perspective: 1700px;
 	perspective-origin: 0 50%;
 }
-.cs-style-1 figure {
+.thumbnail-hvr figure {
 	transform-style: preserve-3d;
 }
-.cs-style-1 figure > div {
+.thumbnail-hvr figure > div {
 	overflow: hidden;
 }
-.cs-style-1 figure img {
+.thumbnail-hvr figure img {
 	transition: transform 0.4s;
 }
-.no-touch .cs-style-1 figure:hover img,
-.cs-style-1 figure.cs-hover img {
+.thumbnail-hvr figure:hover img {
 	transform: translateX(25%);
 }
-.cs-style-1 figcaption {
+.thumbnail-hvr figcaption {
 	height: 100%;
 	width: 50%;
 	opacity: 0;
@@ -236,13 +233,12 @@ button:hover {
 	transform: rotateY(-90deg);
 	transition: transform 0.4s, opacity 0.1s 0.3s;
 }
-.no-touch .cs-style-1 figure:hover figcaption,
-.cs-style-1 figure.cs-hover figcaption {
+.thumbnail-hvr figure:hover figcaption {
 	opacity: 1;
 	transform: rotateY(0deg);
 	transition: transform 0.4s, opacity 0.1s;
 }
-.cs-style-1 figcaption a {
+.thumbnail-hvr figcaption a {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
