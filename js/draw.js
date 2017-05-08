@@ -23,8 +23,11 @@ function eraser() {
 
 function rainbow() {
 	$(".box").mouseenter(function(){
-		var rainbowPaint = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
-		$(this).css("background", rainbowPaint);
+		// just 'pretty' colors
+		var prettyRainbow = ["#F44336", "#f2f", "#22f", "#2ff", "#2f2", "#ff2", "#E91E63", "#9C27B0", "#673AB7", "#2196F3", "#00E676", "#FFEB3B", "#FF9800", "#FF5722", "#00BCD4", "#FF4081"];
+		// full color range
+		// var rainbowPaint = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+		$(this).css("background", prettyRainbow[Math.floor(Math.random() * prettyRainbow.length)]);
 	});
 }
 
@@ -38,17 +41,16 @@ $(document).ready(function() {
   }));
 
   // Pretty rainbow text
-  $("h2").mouseenter( $.debounce( 250, function(){
+  $("h2").mouseenter(function(){
     $(".show").hide();
     $(".hide").fadeIn();
-  }));
+  });
 
   // CANVAS FUNCTIONS
-	gridSize = 30;
+	gridSize = 25;
 
 	drawGrid();
-
-	marker();
+	rainbow();
 
 	$('[name="clear"]').click(function(){
 		$(".box").css("background-color", "#FFF");
@@ -66,7 +68,7 @@ $(document).ready(function() {
 		gridSize = prompt("Please enter a number from 2-40 to change the SketchPad's grid size. For example, '16' generates a 16x16 grid.", "16");
 		$('#canvas').empty();
 		drawGrid();
-		marker();
+		rainbow();
 	});
 	$('[name="toggle"]').click(function() {
 		$(".box").toggleClass("outline");
