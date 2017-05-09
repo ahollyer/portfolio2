@@ -23,7 +23,7 @@ body {
   width: 50%;
   float: right;
 
-  background: url(../img/minnesota_15.jpg) center top no-repeat;
+  background: url(../static/img/minnesota_15.jpg) center top no-repeat;
   background-size: cover;
 
   shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);

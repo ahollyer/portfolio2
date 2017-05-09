@@ -17,11 +17,11 @@
 
   <nav class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="sn-link" href="#">About</a>
-    <a class="sn-link" href="#">Portfolio</a>
-    <a class="sn-link" href="#">Technologies</a>
-    <a class="sn-link" href="#">Contact</a>
-    <a class="sn-link" href="#">Blog</a>
+    <a class="sn-link" href="#work">Work</a>
+    <a class="sn-link" href="#about">About</a>
+    <a class="sn-link" href="#technologies">Technologies</a>
+    <a class="sn-link" href="#contact">Contact</a>
+    <a class="sn-link" href="#blog">Blog</a>
     <ul>
       <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
       <li><a class="sn-link" href="https://github.com/ahollyer" target="blank"><i class="fa fa-github"></i></a></li>
@@ -47,108 +47,83 @@
       <button name="eraser">Eraser</button>
       <button name="rainbow">Rainbow!</button>
   		<button name="clear">Clear Canvas</button>
-  		<button name="change">Change Grid Size</button>
+  		<!-- <button name="change">Change Grid Size</button> -->
   		<button name="toggle">Toggle Outline</button><br>
 
-      <p>Hover your mouse over the squares to draw.</p>
-      <p><i class="fa fa-arrow-circle-down"></i></p>
+      <p id="scroll-down">
+        <a href="#work"><i class="fa fa-arrow-circle-down fa-2x"></i></a>
+      </p>
   	</div>
 
-    <section>
-      PORTFOLIO
+    <a name="work"></a>
+    <section id="work">
+      <h2>See my <span class="show">Work</span><span class="hide cyan">Play</span>.</h2>
       <ul class="grid thumbnail-hvr">
       	<li>
       		<figure>
             <div>
-      			  <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
+      			  <img src="{% static "img/instant-inspiration.png" %}" alt="tree bark">
             </div>
       			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
+      				<h3>Instant Inspiration</h3>
+      				<span>A random quote generator with various themes.</span>
+              <a class="demo" href="https://ahollyer.github.io/instant-inspiration/tolkien.html" target="blank">Demo</a>
+						  <a class="repo" href="https://github.com/ahollyer/instant-inspiration" target="blank">Code</a>
       			</figcaption>
       		</figure>
       	</li>
         <li>
       		<figure>
             <div>
-      			  <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
+      			  <img src="{% static "img/pinky-punky.png" %}" alt="tree bark">
             </div>
       			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
+      				<h3>Pinky Punky</h3>
+      				<span>Prototype for a simple 2D platformer.</span>
+              <a class="demo" href="https://ahollyer.github.io/pinky-punky/" target="blank">Demo</a>
+              <a class="repo" href="https://github.com/ahollyer/pinky-punky" target="blank">Code</a>
       			</figcaption>
       		</figure>
       	</li>
         <li>
       		<figure>
       			<div>
-      			  <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
+      			  <img src="{% static "img/tribute-page.png" %}" alt="tree bark">
       			</div>
       			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
+      				<h3>LegendaryGrandma.com</h3>
+      				<span>A tribute page for my grandma on her 75th birthday.</span>
+              <a class="demo" href="http://www.legendarygrandma.com" target="blank">Demo</a>
+              <a class="repo" href="https://github.com/ahollyer/tribute-pages" target="blank">Code</a>
       			</figcaption>
       		</figure>
       	</li>
         <li>
       		<figure>
       			<div>
-              <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
+              <img src="{% static "img/trust-me.png" %}" alt="tree bark">
             </div>
       			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-        <li>
-      		<figure>
-      			<div>
-              <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
-            </div>
-      			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-        <li>
-      		<figure>
-      			<div>
-      			  <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
-      			</div>
-      			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-        <li>
-      		<figure>
-      			<div>
-      			  <img src="{% static "img/tree_bark.png" %}" alt="tree bark">
-      			</div>
-      			<figcaption>
-      				<h3>Trees</h3>
-      				<span>Aspen Hollyer</span>
-      				<a href="">Take a look</a>
+      				<h3>Trust Me</h3>
+      				<span>A weird thought experiment. Built with MIT's Gameblox engine.</span>
+      				<a class="repo" href="https://gameblox.org/play/11305/" target="blank">Demo</a>
       			</figcaption>
       		</figure>
       	</li>
       </ul>
+    </section>
 
-
-
-      Lorem ipsum dolor
-       sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis no
-      <p>strud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l
-      </p><p>aboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ci</p><p>llum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor</p>
+    <a name="about"></a>
+    <section id="about">
+      <div class="container">
+      <div class="shaped"></div>
+        <div class="content">
+          <h1>About Me</h1>
+          <h3>Educator turned software developer.</h3>
+          <p>Get to know me by the numbers: over 300 hours of self-study in web development and computer science, 3 years professional experience as an English teacher at the secondary level, 2 degrees from Texas A&amp;M University (Gig'em!), and currently enrolled in a 16-week, full-time coding bootcamp.</p>
+          <p>Please have a look around, and feel free to connect with me via e-mail or social media!</p>
+        </div>
+      </div>
     </section>
 
   <!-- Scripts -->

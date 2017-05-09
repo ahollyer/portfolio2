@@ -8,30 +8,48 @@ body {
   font-family: 'Amatic SC', cursive;
   color: #777;
 }
+h1, h2 {
+  font-size: 3em;
+  text-align: center;
+}
 p {
   width: 500px;
   margin: 10px auto;
   color: #777;
   text-align: center;
 }
-button {
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-family: 'Amatic SC', cursive;
-  font-size: 1em;
-	margin: 0 25px;
-	padding: 3px 10px;
-	background-color: #fff;
-	color: #777;
-	border: 1px solid #777;
-	border-radius: 12px;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+a {
+  color: #777;
+  text-decoration: none;
 }
-button:hover {
-  background-color: #777;
-  color: #fff;
+a:hover {
+  color: #EC407A;
+}
+.purple {
+  color: #673AB6;
+}
+.cyan {
+  color: rgb(0, 187, 211);
+}
+.pink {
+  color: #EC407A;
+}
+.orange {
+  color: #FE5722;
+}
+.yellow {
+  color: #FEEA3B;
+}
+/*.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}*/
+#work {
+  background: url(/static/img/tree_bark.png) repeat;
+  padding-top: 20px;
 }
 
 /* Jumbotron Styles */
@@ -43,25 +61,11 @@ button:hover {
   top: 5%;
   left: 25%;
   width: 50%;
-
-  font-size: 2em;
-  font-weight: 700;
-  text-align: center;
 }
 .controls {
   margin: 10px auto;
   height: 20vh;
   text-align: center;
-}
-.purple {
-  color: #673AB6;
-}
-.rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 #canvas {
   margin: 0;
@@ -77,6 +81,30 @@ button:hover {
 }
 .outline {
 	border: 1px dotted #c8c8c8;
+}
+button {
+	display: inline-block;
+	margin: 5px 25px;
+	padding: 3px 10px;
+	background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+
+  border: 1px solid #777;
+  border-radius: 12px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1em;
+	color: #777;
+
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+button:hover {
+  background-color: #777;
+  color: #fff;
+}
+#scroll-down {
+  margin-top: 20px;
 }
 
 /* Sidenav Styles */
@@ -153,7 +181,7 @@ button:hover {
 
 /* Portfolio Thumbnails */
 .grid {
-	padding: 20px 20px 100px 20px;
+	padding: 0 20px 100px 20px;
 	max-width: 1300px;
 	margin: 0 auto;
 	list-style: none;
@@ -181,7 +209,7 @@ button:hover {
   box-sizing: border-box;
 	top: 0;
 	left: 0;
-	padding: 20px;
+	padding: 10px;
 	background: #333;
 	color: #818181;
 }
@@ -219,10 +247,11 @@ button:hover {
 	overflow: hidden;
 }
 .thumbnail-hvr figure img {
-	transition: transform 0.4s;
+	transition: 0.4s;
 }
 .thumbnail-hvr figure:hover img {
 	transform: translateX(25%);
+  filter: grayscale(90%);
 }
 .thumbnail-hvr figcaption {
 	height: 100%;
@@ -239,7 +268,40 @@ button:hover {
 	transition: transform 0.4s, opacity 0.1s;
 }
 .thumbnail-hvr figcaption a {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
+  position: absolute;
+  bottom: 10px;
+
+  text-decoration: none;
+}
+.thumbnail-hvr figcaption a.repo {
+	right: 10px;
+}
+.thumbnail-hvr figcaption a.demo {
+	right: 75px;
+}
+
+/* About section - shaped div styles */
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+.content {
+  padding: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #fff;
+
+  shape-outside: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+}
+.shaped {
+  height: 100%;
+  width: 50%;
+  float: right;
+
+  background: url(/static/img/minnesota_15.jpg) center top no-repeat;
+  background-size: cover;
+
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
 }

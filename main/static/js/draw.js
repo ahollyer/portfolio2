@@ -1,7 +1,7 @@
 // DRAWING TOOLS
 function drawGrid(){
 	for (var i = 0; i < gridSize * gridSize; i++) {
-		$("#canvas").append('<div class="box outline"></div>');
+		$("#canvas").append('<div class="box"></div>');
 	}
 	$(".box").css({
 		'width': $('#canvas').width() / gridSize,
@@ -31,22 +31,25 @@ function rainbow() {
 	});
 }
 
+
+
+
 $(document).ready(function() {
-  $(".hide").hide();
+	$(".hide").hide();
 
-  $(window).resize( $.throttle( 350, function(){
-    $('#canvas').empty();
-    drawGrid();
-    marker();
-  }));
-
-  // Pretty rainbow text
-  $("h2").mouseenter(function(){
-    $(".show").hide();
-    $(".hide").fadeIn();
+  $(".show").mouseenter(function(){
+    $(this).hide();
+		$(this).next().fadeIn();
+    //$("#" + this.id + " + .hide").fadeIn();
   });
 
   // CANVAS FUNCTIONS
+	$(window).resize( $.throttle( 350, function(){
+		$('#canvas').empty();
+		drawGrid();
+		marker();
+	}));
+
 	gridSize = 25;
 
 	drawGrid();
@@ -64,12 +67,12 @@ $(document).ready(function() {
 	$('[name="rainbow"]').click(function(){
 		rainbow();
 	});
-	$('[name="change"]').click(function(){
-		gridSize = prompt("Please enter a number from 2-40 to change the SketchPad's grid size. For example, '16' generates a 16x16 grid.", "16");
-		$('#canvas').empty();
-		drawGrid();
-		rainbow();
-	});
+	// $('[name="change"]').click(function(){
+	// 	gridSize = prompt("Please enter a number from 2-40 to change the sketchpad's grid size. For example, '16' generates a 16x16 grid.", "16");
+	// 	$('#canvas').empty();
+	// 	drawGrid();
+	// 	rainbow();
+	// });
 	$('[name="toggle"]').click(function() {
 		$(".box").toggleClass("outline");
 	});
