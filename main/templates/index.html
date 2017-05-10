@@ -7,7 +7,7 @@
 	<title>Aspen Hollyer's Portfolio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans" rel="stylesheet">
   <script src="https://use.fontawesome.com/0b323d712f.js" async></script>
   <!-- Styles -->
   <link type="text/css" rel="stylesheet" href="{% static "css/main.css" %}">
@@ -49,10 +49,6 @@
   		<button name="clear">Clear Canvas</button>
   		<!-- <button name="change">Change Grid Size</button> -->
   		<button name="toggle">Toggle Outline</button><br>
-
-      <p id="scroll-down">
-        <a href="#work"><i class="fa fa-arrow-circle-down fa-2x"></i></a>
-      </p>
   	</div>
 
     <a name="work"></a>
@@ -116,13 +112,42 @@
     <a name="about"></a>
     <section id="about">
       <div class="container">
-      <div class="shaped"></div>
+        <div class="shaped"></div>
         <div class="content">
-          <h1>About Me</h1>
+          <h2>About Me:</h2>
           <h3>Educator turned software developer.</h3>
-          <p>Get to know me by the numbers: over 300 hours of self-study in web development and computer science, 3 years professional experience as an English teacher at the secondary level, 2 degrees from Texas A&amp;M University (Gig'em!), and currently enrolled in a 16-week, full-time coding bootcamp.</p>
+          <p>Get to know me by the numbers:
+            <ul>
+              <li>over 320 hours self-study in web development and computer science</li>
+              <li>3 years experience as an English teacher at the secondary level</li>
+              <li>2 degrees from Texas A&amp;M University (Gig'em!)</li>
+              <li></li>
+            </ul>
+            , and currently enrolled in a 16-week, full-time coding bootcamp.</p>
           <p>Please have a look around, and feel free to connect with me via e-mail or social media!</p>
-        </div>
+        </div><!-- .content -->
+      </div><!-- .container -->
+    </section>
+
+    <a name="contact"></a>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get in touch. Please feel free to ask a question, make a suggestion, or request my services.</p>
+      <div>
+        <form action="/" method="POST">
+          {% csrf_token %}
+          <label>Name: </label>
+          <input type="text" name="name" required>
+          <br><br>
+          <label>E-mail: </label>
+          <input type="email" name="email" required>
+          <br><br>
+          <label>Message: </label>
+          <br>
+          <textarea rows="5" cols="50" name="message" required></textarea>
+          <br><br>
+          <input type="submit">
+        </form>
       </div>
     </section>
 

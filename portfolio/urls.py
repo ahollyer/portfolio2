@@ -20,5 +20,6 @@ import main.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', main.views.home)
+    url(r'^$', main.views.home, name='home'),
+    url(r'^thanks$', main.views.thanks, name='thanks'),
 ]
