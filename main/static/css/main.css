@@ -311,6 +311,11 @@ button:hover {
 /* Contact form */
 #contact {
   min-height: 100vh;
+  text-align: center;
+  /*background: url(/static/img/swirl_pattern.png);*/
+}
+#contact p {
+  margin-bottom: 50px;
 }
 .form-box {
   width: 95%;
