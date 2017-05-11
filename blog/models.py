@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
-
-# Create your models here.
+from markdownx.models import MarkdownxField
 
 class Blog(models.Model):
   name = models.CharField(max_length=50)
@@ -15,7 +14,7 @@ class Post(models.Model):
   subtitle = models.CharField(max_length=140,
                               blank=True, null=True)
   slug = models.SlugField(max_length=50, unique=True)
-  body = models.TextField()
+  body = MarkdownxField()
   created = models.DateTimeField(auto_now_add=True)
   blog = models.ForeignKey(Blog)
   author = models.ForeignKey(settings.AUTH_USER_MODEL)

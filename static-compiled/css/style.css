@@ -1,0 +1,51 @@
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif !important;
+}
+body {
+  background-color: #673AB6;
+}
+.container {
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+}
+.content {
+  padding: 20px;
+  width: 60%;
+  height: 100%;
+  background-color: #FAFAFA;
+
+  shape-outside: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+}
+.shaped {
+  height: 100%;
+  width: 50%;
+  float: right;
+
+  background: url(../static/img/minnesota_15.jpg) center top no-repeat;
+  background-size: cover;
+
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  background-color: #673AB6;
+  color: #FAFAFA;
+}
+.cyan {
+  color: rgb(0, 187, 211);
+}
+.pink {
+  color: #EC407A;
+}
+.orange {
+  color: #FE5722;
+}
+.yellow {
+  color: #FEEA3B;
+}
+a:hover {
+  font-size: 1.2em;
+}

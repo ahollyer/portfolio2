@@ -7,5 +7,3 @@ function closeNav() {
   document.querySelector(".sidenav").style.width = "0";
   document.querySelector(".main").style.marginLeft = "0";
 }
-
-// 

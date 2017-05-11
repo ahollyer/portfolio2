@@ -1,11 +1,11 @@
 // DRAWING TOOLS
 function drawGrid(){
 	for (var i = 0; i < gridSize * gridSize; i++) {
-		$("#canvas").append('<div class="box"></div>');
+		$(".canvas").append('<div class="box"></div>');
 	}
 	$(".box").css({
-		'width': $('#canvas').width() / gridSize,
-		'height': $('#canvas').height() / gridSize
+		'width': $('.canvas').width() / gridSize,
+		'height': $('.canvas').height() / gridSize
 	});
 }
 
@@ -35,6 +35,7 @@ function rainbow() {
 
 
 $(document).ready(function() {
+	// CUTESY HOVER EFFECTS
 	$(".hide").hide();
 
   $(".show").mouseenter(function(){
@@ -45,7 +46,7 @@ $(document).ready(function() {
 
   // CANVAS FUNCTIONS
 	$(window).resize( $.throttle( 350, function(){
-		$('#canvas').empty();
+		$('.canvas').empty();
 		drawGrid();
 		marker();
 	}));
