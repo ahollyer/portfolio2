@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '52.207.192.126',
     'localhost',
+    'portfolio.aspenhollyer.com',
+    'aspenhollyer.com',
 ]
 
 
