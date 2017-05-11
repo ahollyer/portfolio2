@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'portfolio.aspenhollyer.com',
     'aspenhollyer.com',
+    'www.aspenhollyer.com',
 ]
 
 
