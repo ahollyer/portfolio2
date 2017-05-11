@@ -132,22 +132,21 @@
     <a name="contact"></a>
     <section id="contact">
       <h2>Contact</h2>
-      <p>Get in touch. Please feel free to ask a question, make a suggestion, or request my services.</p>
-      <div>
-        <form action="/" method="POST">
+      <p>Get in touch! Please feel free to ask a question, make a suggestion, or request my services.</p>
+      <div class="form-box">
+        <img src="{% static "img/envelope.jpeg" %}" alt="envelope flap">
+        <form action="/" method="POST" id="contact-form">
           {% csrf_token %}
-          <label>Name: </label>
+          <label>Name: &nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input type="text" name="name" required>
           <br><br>
-          <label>E-mail: </label>
+          <label>E-mail: &nbsp;&nbsp;</label>
           <input type="email" name="email" required>
           <br><br>
-          <label>Message: </label>
-          <br>
-          <textarea rows="5" cols="50" name="message" required></textarea>
-          <br><br>
-          <input type="submit">
+          <label>Message: &nbsp;</label>
+          <textarea rows="5" name="message" required></textarea>
         </form>
+        <button id="submit-button" type="submit" form="contact-form" value="Submit">Send</button>
       </div>
     </section>
 
