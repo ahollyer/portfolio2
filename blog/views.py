@@ -1,11 +1,18 @@
 from django.template.response import TemplateResponse
 from django.shortcuts import get_object_or_404
+from django import http
 
-from blog.models import Blog, Post
+from blog.models import Blog, Post, Tag
 
 def blog_index (request, blog_slug):
     blog = get_object_or_404(Blog, slug=blog_slug)
     posts = Post.objects.filter(blog=blog)
+
+    tag = request.GET.get('tag', '')
+    if tag:
+        posts = posts.filter(tags__slug=tag)
+        if posts.count() == 0:
+            raise http.Http404
 
     context = {
         'blog': blog,
