@@ -59,12 +59,16 @@ a:hover {
   background: url(/static/img/tree_bark.png) repeat;
   padding-top: 10px;
   padding-bottom: 20px;
+  width: 100%;
 }
 .hide {
   display: none;
 }
 
 /* Jumbotron Styles */
+.wrapper {
+  height: 100%;
+}
 .title {
   position: absolute;
   top: 5%;

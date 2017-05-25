@@ -14,10 +14,11 @@
 <body>
   <nav class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="sn-link" href="#work-a">Work</a>
-    <a class="sn-link" href="#about-a">About</a>
+    <a class="sn-link" href="{% url 'home' %}">Home</a>
+    <a class="sn-link" href="{% url 'work' %}">Work</a>
+    <a class="sn-link" href="{% url 'about' %}">About</a>
     <a class="sn-link" href="#technologies">Technologies</a>
-    <a class="sn-link" href="#contact-a">Contact</a>
+    <a class="sn-link" href="{% url 'contact' %}">Contact</a>
     <a class="sn-link" href="https://ahollyer.github.io">Blog</a>
     <ul class="link-list">
       <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
@@ -31,7 +32,8 @@
     <span onclick="openNav()"><i class="fa fa-navicon"></i></span>
   </div>
 
-  {% block content %}{% endblock %}
+  <div class="wrapper">
+    {% block content %}{% endblock %}
 
   <ul class="link-list">
     <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
@@ -40,6 +42,7 @@
     <li><a class="sn-link" href="https://twitter.com/aspen-hollyer" target="blank"><i class="fa fa-twitter"></i></a></li>
     <li><a class="sn-link" href=""></a></li>
   </ul>
+</div>
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="/static/js/debounce.min.js"></script>

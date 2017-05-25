@@ -1,4 +1,6 @@
 // DRAWING TOOLS
+var gridSize = 30;
+
 function drawGrid(){
 	for (var i = 0; i < gridSize * gridSize; i++) {
 		$(".canvas").append("<div class='box outline'></div>");
@@ -42,8 +44,6 @@ $(document).ready(function() {
 		$(".title").remove();
 		$("body").append(title);
 	}));
-
-	gridSize = 30;
 
 	drawGrid();
 	rainbow();

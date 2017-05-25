@@ -4,6 +4,12 @@ from django import http
 from django.core.mail import send_mail
 
 def home (request):
+    return TemplateResponse(request, 'index.html', {})
+
+def about (request):
+    return TemplateResponse(request, 'about.html', {})
+
+def contact (request):
     form = ContactForm(request.POST or None)
 
     if request.method == 'POST':
@@ -20,18 +26,15 @@ def home (request):
                 ['me@aspenhollyer.com'],
                 fail_silently=False,
             )
-            return http.HttpResponseRedirect('/thanks')
+            return http.HttpResponseRedirect('/thanks/')
         print(form.errors)
     context = {
         'form': form
     }
-    return TemplateResponse(request, 'index.html', context)
+    return TemplateResponse(request, 'contact.html', context)
 
 def thanks (request):
     return TemplateResponse(request, 'thanks.html', {})
 
 def work (request):
     return TemplateResponse(request, 'work.html', {})
-
-def about (request):
-    return TemplateResponse(request, 'about.html', {})

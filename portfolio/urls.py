@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^thanks/$', main.views.thanks, name='thanks'),
     url(r'^work/$', main.views.work, name='work'),
     url(r'^about/$', main.views.about, name='about'),
+    url(r'^contact/$', main.views.contact, name='contact'),
 
     url(r'^blog/(\S+)/(\S+)/$', blog.views.blog_post),
     url(r'^blog/(\S+)/$', blog.views.blog_index),
