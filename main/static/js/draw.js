@@ -3,7 +3,7 @@ var gridSize = 30;
 
 function drawGrid(){
 	for (var i = 0; i < gridSize * gridSize; i++) {
-		$(".canvas").append("<div class='box outline'></div>");
+		$(".canvas").append("<div class='box'></div>");
 	}
 	$(".box").css({
 		"width": $(".canvas").width() / gridSize,
@@ -40,7 +40,7 @@ $(document).ready(function() {
 	$(window).resize( $.throttle(350, function(){
 		$(".canvas").empty();
 		drawGrid();
-		marker();
+		rainbow();
 		$(".title").remove();
 		$("body").append(title);
 	}));
