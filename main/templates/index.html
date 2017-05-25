@@ -1,166 +1,17 @@
-<!DOCTYPE html> {% load static %}
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale:1.0">
+{% extends "base.html" %}{% load static %}
 
-	<title>Aspen Hollyer's Portfolio</title>
+{% block content %}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans" rel="stylesheet">
-  <script src="https://use.fontawesome.com/0b323d712f.js" async></script>
-  <!-- Styles -->
-  <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
-
-</head>
-<body>
-<div id="fullpage">
-  <nav class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="sn-link" href="#work-a">Work</a>
-    <a class="sn-link" href="#about-a">About</a>
-    <a class="sn-link" href="#technologies">Technologies</a>
-    <a class="sn-link" href="#contact-a">Contact</a>
-    <a class="sn-link" href="https://ahollyer.github.io">Blog</a>
-    <ul class="link-list">
-      <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
-      <li><a class="sn-link" href="https://github.com/ahollyer" target="blank"><i class="fa fa-github"></i></a></li>
-      <li><a class="sn-link" href="https://www.linkedin.com/in/aspen-hollyer" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
-      <li><a class="sn-link" href="https://twitter.com/aspen-hollyer" target="blank"><i class="fa fa-twitter"></i></a></li>
-      <li><a class="sn-link" href=""></a></li>
-    </ul>
-  </nav>
-
-  <div class="pancake">
-    <span onclick="openNav()"><i class="fa fa-navicon"></i></span>
+  <div class="canvas">
+    <h1 class="title">Hi, I'm Aspen. I make <span class="show">fun web apps</span><span class="hide purple">web apps fun</span>.</h1>
   </div>
 
-  <h1 class="title">Hi, I'm Aspen. I make <span class="show">fun web apps</span><span class="hide purple">web apps fun</span>.</h1>
-    <div class="canvas">
-    </div>
-
-  	<div class="controls">
-      <button name="marker">Marker</button>
-      <button name="eraser">Eraser</button>
-      <button name="rainbow">Rainbow!</button>
-  		<button name="clear">Clear Canvas</button>
-  		<!-- <button name="change">Change Grid Size</button> -->
-  		<button name="toggle">Toggle Outline</button><br>
-  	</div>
-
-    <a name="work-a"></a>
-    <section class="work section">
-      <div class="section-top">
-        <h2>Recent <span class="show">Work</span><span class="hide cyan">Play</span>.</h2>
-      </div>
-      <ul class="grid thumbnail-hvr">
-      	<li>
-      		<figure>
-            <div>
-      			  <img src="{% static 'img/instant-inspiration.png' %}" alt="tree bark">
-            </div>
-      			<figcaption>
-      				<h3>Instant Inspiration</h3>
-      				<span>A random quote generator with various themes.</span>
-              <a class="demo" href="https://ahollyer.github.io/instant-inspiration/tolkien.html" target="blank">Demo</a>
-						  <a class="repo" href="https://github.com/ahollyer/instant-inspiration" target="blank">Code</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-        <li>
-      		<figure>
-            <div>
-      			  <img src="{% static 'img/pinky-punky.png' %}" alt="tree bark">
-            </div>
-      			<figcaption>
-      				<h3>Pinky Punky</h3>
-      				<span>Prototype for a simple 2D platformer.</span>
-              <a class="demo" href="https://ahollyer.github.io/pinky-punky/" target="blank">Demo</a>
-              <a class="repo" href="https://github.com/ahollyer/pinky-punky" target="blank">Code</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-        <li>
-      		<figure>
-      			<div>
-      			  <img src="{% static 'img/tribute-page.png' %}" alt="tree bark">
-      			</div>
-      			<figcaption>
-      				<h3>LegendaryGrandma.com</h3>
-      				<span>A tribute page for my grandma on her 75th birthday.</span>
-              <a class="demo" href="http://www.legendarygrandma.com" target="blank">Demo</a>
-              <a class="repo" href="https://github.com/ahollyer/tribute-pages" target="blank">Code</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-        <li>
-      		<figure>
-      			<div>
-              <img src="{% static 'img/trust-me.png' %}" alt="tree bark">
-            </div>
-      			<figcaption>
-      				<h3>Trust Me</h3>
-      				<span>A weird thought experiment. Built with MIT's Gameblox engine.</span>
-      				<a class="repo" href="https://gameblox.org/play/11305/" target="blank">Demo</a>
-      			</figcaption>
-      		</figure>
-      	</li>
-      </ul>
-    </section>
-
-    <a name="about-a"></a>
-    <div class="about section">
-      <div class="container">
-        <div class="shaped"></div>
-        <div class="content">
-          <h2>Aspen Hollyer</h2>
-          <h3>Educator <i class="fa fa-angle-double-right"></i>-turned--<i class="fa fa-caret-right"></i> software developer.</h3>
-          <p>Get to know me by the numbers:</p>
-            <ul>
-              <li>over <span class="cyan">320 hours</span> self-study in web development and programming</li>
-              <li><span class="pink">3 years</span> experience as an English teacher at the secondary level</li>
-              <li><span class="purple">2 degrees</span> from Texas A&amp;M University (Gig'em!)</li>
-              <li>currently in a <span class="orange">16-week,</span> full-time coding bootcamp</li>
-            </ul>
-          <p>My professional interests include full-stack development and gamification, among others. I'm also the wife of that handsome bald guy in the picture, a sci fi lover, and a fabulous cook.</p>
-        </div><!-- .content -->
-      </div><!-- .container -->
-    </div>
-
-    <a name="contact-a"></a>
-    <div class="contact section">
-      <div class="section-top">
-        <h2>Contact</h2>
-      </div>
-      <div class="form-box">
-        <img src="{% static 'img/envelope.jpeg' %}" alt="envelope flap">
-        <form action="/" method="POST" id="contact-form">
-          {% csrf_token %}
-          <label>Name: &nbsp;&nbsp;&nbsp;&nbsp;</label>
-          <input type="text" name="name" required>
-          <br><br>
-          <label>E-mail: &nbsp;&nbsp;</label>
-          <input type="email" name="email" required>
-          <br><br>
-          <label>Message: &nbsp;</label>
-          <textarea rows="5" name="message" required></textarea>
-        </form>
-        <button id="submit-button" type="submit" form="contact-form" value="Submit">Send</button>
-      </div>
-      <ul class="link-list">
-        <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
-        <li><a class="sn-link" href="https://github.com/ahollyer" target="blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sn-link" href="https://www.linkedin.com/in/aspen-hollyer" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
-        <li><a class="sn-link" href="https://twitter.com/aspen-hollyer" target="blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sn-link" href=""></a></li>
-      </ul>
-    </div>
-
-  <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="/static/js/debounce.min.js"></script>
-  <script src="/static/js/main.js"></script>
-  <script src="/static/draw.js"></script>
-</div><!-- .fullpage -->
-</body>
-</html>
+  <div class="controls">
+    <button name="marker">Marker</button>
+    <button name="eraser">Eraser</button>
+    <button name="rainbow">Rainbow!</button>
+  	<button name="clear">Clear Canvas</button>
+  	<!-- <button name="change">Change Grid Size</button> -->
+  	<button name="toggle">Toggle Outline</button><br>
+  </div>
+{% endblock %}

@@ -28,5 +28,10 @@ def home (request):
     return TemplateResponse(request, 'index.html', context)
 
 def thanks (request):
-    context = {}
-    return TemplateResponse(request, 'thanks.html', context)
+    return TemplateResponse(request, 'thanks.html', {})
+
+def work (request):
+    return TemplateResponse(request, 'work.html', {})
+
+def about (request):
+    return TemplateResponse(request, 'about.html', {})

@@ -22,7 +22,9 @@ import main.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', main.views.home, name='home'),
-    url(r'^thanks$', main.views.thanks, name='thanks'),
+    url(r'^thanks/$', main.views.thanks, name='thanks'),
+    url(r'^work/$', main.views.work, name='work'),
+    url(r'^about/$', main.views.about, name='about'),
 
     url(r'^blog/(\S+)/(\S+)/$', blog.views.blog_post),
     url(r'^blog/(\S+)/$', blog.views.blog_index),

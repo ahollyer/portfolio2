@@ -5,12 +5,12 @@ function drawGrid(){
 	}
 	$(".box").css({
 		"width": $(".canvas").width() / gridSize,
-		"height": $(".canvas").width() / gridSize
+		"height": $(".canvas").height() / gridSize
 	});
 }
 
 function marker() {
-	$(".box").mouseenter(function(){
+	$(".box").on("mouseenter touchstart", function(){
 		$(this).css("background-color", "#b2b2b2");
 	});
 }
@@ -33,18 +33,14 @@ function rainbow() {
 
 
 $(document).ready(function() {
-	// CUTESY HOVER EFFECTS
-	$(".hide").hide();
-
-  $(".show").mouseenter(function(){
-    $(this).hide().next().fadeIn();
-  });
-
+	var title = $("h1")[0].outerHTML;
   // CANVAS FUNCTIONS
-	$(window).resize( $.throttle( 350, function(){
+	$(window).resize( $.throttle(350, function(){
 		$(".canvas").empty();
 		drawGrid();
 		marker();
+		$(".title").remove();
+		$("body").append(title);
 	}));
 
 	gridSize = 30;
