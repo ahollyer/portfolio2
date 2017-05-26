@@ -143,7 +143,7 @@ button:hover {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 11;
     top: 0;
     left: 0;
     overflow-x: hidden;
@@ -303,6 +303,25 @@ nav .link-list {
 }
 
 /* About section - shaped div styles */
+@media (max-width: 750px) {
+  h2, h3 {
+    font-size: 1.5em;
+  }
+  p, li {
+    font-size: 16px;
+  }
+}
+@media (min-height: 750px) {
+  .about .link-list {
+    margin-top: 150px;
+  }
+}
+.about h2 {
+  margin-bottom: 0;
+}
+.about h3 {
+  margin: 0;
+}
 .container {
   margin: 0;
   height: 100vh;
@@ -332,16 +351,14 @@ nav .link-list {
 .shaped:hover {
   filter: grayscale(0%);
 }
+.strike {
+  text-decoration: line-through;
+}
 
 /* Contact form */
 .contact {
   min-height: 100vh;
   text-align: center;
-}
-.contact .section-top {
-  background: url(/static/img/tree_bark.png);
-  padding-top: 10px;
-  padding-bottom: 20px;
 }
 .form-box {
   width: 95%;
@@ -405,6 +422,57 @@ input:focus, textarea:focus {
   left: 0;
   z-index: 2;
 }
-#bg:hover, #scratch-off:hover {
-  cursor: url(/static/img/cursor.png), auto;
+#bg:hover, #scratch-off:hover, #scratch-off-container:hover {
+  cursor: url(/static/img/cursor.png), pointer;
+}
+
+/* Skills/Tech */
+.tech-list {
+  max-width: 800px;
+  margin: auto;
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 4em;
+}
+.tech-list li {
+  display: inline;
+}
+.tech-list li p {
+  font-size: 1.2rem;
+}
+
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    z-index: 1;
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: #777;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 6px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent
 }
