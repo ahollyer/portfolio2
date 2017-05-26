@@ -7,7 +7,7 @@
   </div>
   <div class="form-box">
     <img src="{% static 'img/envelope.jpeg' %}" alt="envelope flap">
-    <form action="/" method="POST" id="contact-form">
+    <form action="/contact/" method="POST" id="contact-form">
       {% csrf_token %}
       <label>Name: &nbsp;&nbsp;&nbsp;&nbsp;</label>
       <input type="text" name="name" required>

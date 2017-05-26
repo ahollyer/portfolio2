@@ -69,4 +69,5 @@ $(document).ready(function() {
 	$('[name="toggle"]').click(function() {
 		$(".box").toggleClass("outline");
 	});
+
 });

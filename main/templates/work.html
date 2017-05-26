@@ -1,10 +1,13 @@
 {% extends "base.html" %}{% load static %}
 
 {% block content %}
-<section class="work section">
-  <div class="section-top">
-    <h2>Recent <span class="show">Work</span><span class="hide cyan">Play</span>.</h2>
+<div class="work">
+
+  <div id="scratch-off-container">
+    <img id="bg" src="{% static 'img/play.jpg' %}">
+    <img id="scratch-off" src="{% static 'img/work.jpg' %}">
   </div>
+
   <ul class="grid thumbnail-hvr">
     <li>
   		<figure>
@@ -35,7 +38,7 @@
     <li>
   		<figure>
         <div>
-  			  <img src="{% static 'img/pinky-punky.png' %}" alt="tree bark">
+  			  <img src="{% static 'img/pinky-ss.jpg' %}" alt="tree bark">
         </div>
   			<figcaption>
   				<h3>Pinky Punky</h3>
@@ -71,7 +74,7 @@
   		</figure>
   	</li>
   </ul>
-</section>
+</div>
 
 <ul class="link-list">
   <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
