@@ -120,6 +120,11 @@ button:hover {
   background-color: #777;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+    .controls {
+      display: none;
+    }
+}
 
 /* Sidenav Styles */
 .pancake {
@@ -303,7 +308,7 @@ nav .link-list {
 }
 
 /* About section - shaped div styles */
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
   h2, h3 {
     font-size: 1.5em;
   }
@@ -311,7 +316,7 @@ nav .link-list {
     font-size: 16px;
   }
 }
-@media (min-height: 750px) {
+@media screen and (min-height: 750px) {
   .about .link-list {
     margin-top: 150px;
   }
