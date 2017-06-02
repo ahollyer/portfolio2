@@ -11,11 +11,12 @@
   <script src="https://use.fontawesome.com/0b323d712f.js" async></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
   <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+  {% block style %}{% endblock %}
 </head>
 <body>
   <nav class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a class="sn-link" href="{% url 'home' %}">Aspen Hollyer</a>
+    <a class="sn-link" href="{% url 'home' %}">AspenHollyer.Com</a>
     <a class="sn-link" href="{% url 'work' %}">Work</a>
     <a class="sn-link" href="{% url 'about' %}">About</a>
     <a class="sn-link" href="{% url 'contact' %}">Contact</a>

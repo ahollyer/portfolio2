@@ -326,13 +326,15 @@ nav .link-list {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 .content {
   padding: 10px;
   width: 60%;
   height: 100%;
   background-color: #fff;
+}
+.content label {
+  font-size: 1.7em;
 }
 .shaped {
   height: 100%;
@@ -350,9 +352,6 @@ nav .link-list {
 }
 .shaped:hover {
   filter: grayscale(0%);
-}
-.strike {
-  text-decoration: line-through;
 }
 
 /* Contact form */
