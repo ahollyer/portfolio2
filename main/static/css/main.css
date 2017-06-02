@@ -339,7 +339,7 @@ nav .link-list {
   width: 50%;
   float: right;
 
-  background: url(/static/img/minnesota_15.jpg) center top no-repeat;
+  background: url(/static/img/graffiti-wall.jpg) right top no-repeat;
   background-size: cover;
   filter: grayscale(80%);
   transition: 0.3s;
