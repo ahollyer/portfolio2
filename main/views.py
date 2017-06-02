@@ -33,8 +33,8 @@ def contact (request):
     }
     return TemplateResponse(request, 'contact.html', context)
 
-def tech (request):
-    return TemplateResponse(request, 'tech.html', {})
+# def tech (request):
+#     return TemplateResponse(request, 'tech.html', {})
 
 def thanks (request):
     return TemplateResponse(request, 'thanks.html', {})
