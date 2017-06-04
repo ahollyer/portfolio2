@@ -16,7 +16,7 @@ body {
   color: #777;
 }
 p, form, .content ul {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1.5em;
 }
 h1, h2 {
@@ -327,6 +327,9 @@ nav .link-list {
 .about h3 {
   margin: 0;
 }
+.about ul {
+  margin-top: 0;
+}
 .container {
   margin: 0;
   height: 100vh;
@@ -354,6 +357,22 @@ nav .link-list {
   shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
   shape-margin: 20px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+@media screen and (min-width: 1080px) {
+  .shaped {
+    height: 100%;
+    width: 40%;
+    float: right;
+
+    background: url(/static/img/graffiti-wall.jpg) right top no-repeat;
+    background-size: cover;
+    filter: grayscale(80%);
+    transition: 0.3s;
+
+    shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+    shape-margin: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  }
 }
 .shaped:hover {
   filter: grayscale(0%);
@@ -386,7 +405,7 @@ input, textarea {
   padding: 5px 10px;
   border: 1px solid #777;
   border-radius: 3px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1em;
 }
 input:focus, textarea:focus {
@@ -460,7 +479,7 @@ input:focus, textarea:focus {
     left: 50%;
     margin-left: -60px;
     background-color: #777;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.2rem;
     color: #fff;
     text-align: center;
