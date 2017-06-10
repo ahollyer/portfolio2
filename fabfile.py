@@ -1,6 +1,6 @@
 from fabric.api import run, env, sudo, cd, prefix
 
-env.hosts = ['52.207.192.126']
+env.hosts = ['34.225.89.135']
 env.user = 'aspen'
 
 DIR = '/home/aspen/portfolio2'
