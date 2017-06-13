@@ -3,12 +3,40 @@
 {% block content %}
 <div class="work">
 
+  <!-------- Scratch Off ------->
   <div id="scratch-off-container">
     <img id="bg" src="{% static 'img/play.jpg' %}">
     <img id="scratch-off" src="{% static 'img/work.jpg' %}">
   </div>
 
   <ul class="grid thumbnail-hvr">
+
+    <!------------ Legendary.Family ---------->
+    <li>
+      <figure>
+        <div>
+          <img src="{% static 'img/legfam-ss.jpg' %}" alt="Legendary Family">
+        </div>
+        <figcaption>
+          <h3>Legendary Family</h3>
+          <span>My family: so legendary, we have our own social media app.</span>
+          <a class="demo" href="http://legendary.family" target="_blank">Live</a>
+          <a class="repo" href="https://github.com/ahollyer/dj-legendary-family" target="_blank">Github</a>
+        </figcaption>
+      </figure>
+      I used:
+      <i class="devicon-linux-plain" title="Server: Nginx on Ubuntu 16.04"></i>
+      <i class="devicon-python-plain" title="Python"></i>
+      <i class="devicon-django-plain" title="Django"></i>
+      <i class="devicon-amazonwebservices-original" title="Amazon Web Services (S3, SES)"></i>
+      <i class="devicon-javascript-plain" title="JavaScript"></i>
+      <i class="devicon-jquery-plain" title="jQuery"></i>
+      <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
+      <i class="devicon-css3-plain-wordmark" title="CSS3"></i>
+      <i class="devicon-bootstrap-plain" title="Bootstrap 3"></i>
+    </li>
+
+    <!------------- Blackjack Bunny ---------->
     <li>
   		<figure>
         <div>
@@ -18,65 +46,90 @@
   				<h3>Blackjack Bunny</h3>
   				<span>Browser game for gambling bunnies everywhere.</span>
           <a class="demo" href="http://blackjack-bunny.aspenhollyer.com" target="_blank">Live</a>
-          <a class="repo" href="https://github.com/ahollyer/blackjack-game" target="_blank">Code</a>
+          <a class="repo" href="https://github.com/ahollyer/blackjack-game" target="_blank">Github</a>
   			</figcaption>
   		</figure>
+      I used:
+      <i class="devicon-amazonwebservices-original" title="Amazon Web Services (S3)"></i>
+      <i class="devicon-javascript-plain" title="JavaScript"></i>
+      <i class="devicon-jquery-plain" title="jQuery"></i>
+      <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
+      <i class="devicon-css3-plain-wordmark" title="CSS3"></i>
+      <i class="devicon-bootstrap-plain" title="Bootstrap 4"></i>
   	</li>
+
+    <!---------------- Off The Chain ------------->
     <li>
   		<figure>
         <div>
-  			  <img src="{% static 'img/otc-ss.jpg' %}" alt="tree bark">
+  			  <img src="{% static 'img/otc-ss.jpg' %}" alt="Off The Chain">
         </div>
   			<figcaption>
   				<h3>Off the Chain</h3>
   				<span>Avoid chains. Eat local</span>
           <a class="demo" href="https://off-the-chain.herokuapp.com" target="_blank">Live</a>
-				  <a class="repo" href="https://github.com/ahollyer/off-the-chain" target="_blank">Code</a>
+				  <a class="repo" href="https://github.com/ahollyer/off-the-chain" target="_blank">Github</a>
   			</figcaption>
   		</figure>
+      I used:
+      <i class="devicon-heroku-original" title="Heroku"></i>
+      <i class="devicon-javascript-plain" title="JavaScript"></i>
+      <i class="devicon-jquery-plain" title="jQuery"></i>
+      <i class="devicon-html5-plain-wordmark" title="HTML5"></i>
+      <i class="devicon-css3-plain-wordmark" title="CSS3"></i>
+      <i class="devicon-bootstrap-plain" title="Bootstrap 3"></i>
   	</li>
+
+    <!---------------------- Pinky Punky -------------->
     <li>
   		<figure>
         <div>
-  			  <img src="{% static 'img/pinky-ss.jpg' %}" alt="tree bark">
+  			  <img src="{% static 'img/pinky-ss.jpg' %}" alt="Pinky Punky">
         </div>
   			<figcaption>
   				<h3>Pinky Punky</h3>
-  				<span>Prototype for a simple 2D platformer.</span>
+  				<span>Early prototype for a simple 2D platformer.</span>
           <a class="demo" href="https://ahollyer.github.io/pinky-punky/" target="_blank">Live</a>
-          <a class="repo" href="https://github.com/ahollyer/pinky-punky" target="_blank">Code</a>
+          <a class="repo" href="https://github.com/ahollyer/pinky-punky" target="_blank">Github</a>
   			</figcaption>
   		</figure>
+      I used:
+      Construct2 | Tiled Tilemap Editor
   	</li>
+
+    <!-------------- Instant Inspiration ---------------->
   	<li>
   		<figure>
         <div>
-  			  <img src="{% static 'img/instant-inspiration.png' %}" alt="tree bark">
+  			  <img src="{% static 'img/instant-inspiration.jpg' %}" alt="Instant Inspiration">
         </div>
   			<figcaption>
   				<h3>Instant Inspiration</h3>
   				<span>A random quote generator with various themes.</span>
           <a class="demo" href="https://ahollyer.github.io/instant-inspiration/tolkien.html" target="_blank">Live</a>
-				  <a class="repo" href="https://github.com/ahollyer/instant-inspiration" target="_blank">Code</a>
+				  <a class="repo" href="https://github.com/ahollyer/instant-inspiration" target="_blank">Github</a>
   			</figcaption>
   		</figure>
   	</li>
+
+    <!--------------- LegendaryGrandma.Com --------------->
     <li>
   		<figure>
   			<div>
-  			  <img src="{% static 'img/tribute-page.png' %}" alt="tree bark">
+  			  <img src="{% static 'img/tribute-page.jpg' %}" alt="Legendary Grandma">
   			</div>
   			<figcaption>
   				<h3>LegendaryGrandma.com</h3>
   				<span>A tribute page for my grandma on her 75th birthday.</span>
           <a class="demo" href="http://www.legendarygrandma.com" target="_blank">Demo</a>
-          <a class="repo" href="https://github.com/ahollyer/tribute-pages" target="_blank">Code</a>
+          <a class="repo" href="https://github.com/ahollyer/tribute-pages" target="_blank">Github</a>
   			</figcaption>
   		</figure>
   	</li>
   </ul>
 </div>
 
+<!-------- Social Links ------>
 <ul class="link-list">
   <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
   <li><a class="sn-link" href="https://github.com/ahollyer" target="_blank"><i class="fa fa-github"></i></a></li>

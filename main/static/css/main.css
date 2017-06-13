@@ -43,33 +43,11 @@ a:hover {
 .purple {
   color: #673AB6;
 }
-.cyan {
-  color: rgb(0, 187, 211);
-}
-.pink {
-  color: #EC407A;
-}
-.orange {
-  color: #FE5722;
-}
-.yellow {
-  color: #FEEA3B;
-}
-/*.rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}*/
-.work {
-  min-height: 100%;
-}
+
+/****** Sketchpad Jumbotron Styles ******/
 .hide {
   display: none;
 }
-
-/* Jumbotron Styles */
 .wrapper {
   height: 100%;
 }
@@ -81,7 +59,6 @@ a:hover {
 }
 .controls {
   margin: 10px auto;
-  /*height: 20%;*/
   text-align: center;
 }
 .canvas {
@@ -126,7 +103,7 @@ button:hover {
     }
 }
 
-/* Sidenav Styles */
+/****** Sidenav Styles ******/
 .pancake {
   display: inline-block;
   position: fixed;
@@ -204,7 +181,7 @@ nav .link-list {
 }
 
 
-/* Portfolio Thumbnails */
+/****** Portfolio Thumbnails ******/
 .grid {
 	padding: 0 0 100px 0;
 	max-width: 1300px;;
@@ -250,8 +227,8 @@ nav .link-list {
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: #673AB6;
-	color: #fff;
+	background: #fff;
+	color: #673AB6;
 }
 @media screen and (max-width: 31.5em) {
 	.grid {
@@ -262,7 +239,7 @@ nav .link-list {
 		min-width: 300px;
 	}
 }
-/* Hover effect */
+/* hover effects */
 .thumbnail-hvr li {
 	perspective: 1700px;
 	perspective-origin: 0 50%;
@@ -304,10 +281,10 @@ nav .link-list {
 	right: 10px;
 }
 .thumbnail-hvr figcaption a.demo {
-	right: 75px;
+	right: 78px;
 }
 
-/* About section - shaped div styles */
+/***** About Page - Shaped Div Styles ******/
 @media screen and (max-width: 750px) {
   h2, h3 {
     font-size: 1.5em;
@@ -378,7 +355,7 @@ nav .link-list {
   filter: grayscale(0%);
 }
 
-/* Contact form */
+/******* Contact Form *******/
 .contact {
   min-height: 100vh;
   text-align: center;
@@ -430,7 +407,7 @@ input:focus, textarea:focus {
   padding: 30px;
 }
 
-/* Scratch Off Canvas */
+/******* Scratch-Off Canvas *******/
 #scratch-off-container {
   position: relative;
   width: 350px;
@@ -447,55 +424,4 @@ input:focus, textarea:focus {
 }
 #bg:hover, #scratch-off:hover, #scratch-off-container:hover {
   cursor: url(/static/img/cursor.png), pointer;
-}
-
-/* Skills/Tech */
-.tech-list {
-  max-width: 800px;
-  margin: auto;
-  padding-left: 0;
-  list-style-type: none;
-  font-size: 4em;
-}
-.tech-list li {
-  display: inline;
-}
-.tech-list li p {
-  font-size: 1.2rem;
-}
-
-
-/* Tooltips */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-.tooltip .tooltiptext {
-    z-index: 1;
-    visibility: hidden;
-    position: absolute;
-    width: 120px;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    background-color: #777;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 1.2rem;
-    color: #fff;
-    text-align: center;
-    padding: 5px 5px;
-    border-radius: 6px;
-}
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
-.tooltip .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent
 }

@@ -1,10 +1,12 @@
 {% extends "base.html" %}{% load static %}
 
 {% block content %}
+  <!--------- Canvas ---------->
   <h1 class="title">Hi, I'm Aspen. I make <span class="show">fun web apps</span><span class="hide purple">web apps fun</span>.</h1>
   <div class="canvas">
   </div>
 
+  <!---------- Drawing Tools ---------->
   <div class="controls">
     <button name="marker">Marker</button>
     <button name="eraser">Eraser</button>
@@ -14,6 +16,7 @@
   	<button name="toggle">Toggle Outline</button><br>
   </div>
 
+  <!---------- Social Links -------->
   <ul class="link-list">
     <li><a class="sn-link" href="mailto:aspen.hollyer@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
     <li><a class="sn-link" href="https://github.com/ahollyer" target="_blank"><i class="fa fa-github"></i></a></li>
