@@ -40,6 +40,10 @@ a {
 a:hover {
   color: #EC407A;
 }
+.sanserif {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: .7em;
+}
 .purple {
   color: #673AB6;
 }
