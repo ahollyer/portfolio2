@@ -1,4 +1,4 @@
-from fabric.api import run, env, sudo, cd, prefix
+from fabric.api import run, env, sudo, cd, prefix, shell_env
 
 env.hosts = ['34.225.89.135']
 env.user = 'aspen'
@@ -9,7 +9,8 @@ VENV = 'source /home/aspen/.virtualenvs/portfolio/bin/activate && source SECRET.
 def start ():
   with cd(DIR):
     with prefix(VENV):
-      run('pm2 start uwsgi -- --ini uwsgi.ini > start.log')
+        with shell_env(PATH='/home/aspen/.nvm/versions/node/v6.10.3/bin:$PATH'):
+            run('pm2 start uwsgi -- --ini uwsgi.ini > start.log')
 
 def stop ():
   run('pm2 stop all > stop.log')
