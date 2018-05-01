@@ -234,6 +234,9 @@ nav .link-list {
 	background: #fff;
 	color: #673AB6;
 }
+.grid figcaption span {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 @media screen and (max-width: 31.5em) {
 	.grid {
 		padding: 10px 10px 100px 10px;
